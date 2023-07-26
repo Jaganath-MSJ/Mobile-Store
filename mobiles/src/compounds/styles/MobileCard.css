@@ -1,0 +1,46 @@
+.mobiles {
+    margin: 5em 50px 50px 50px;
+    display: flex;
+    grid-template-columns: repeat(4, 1fr);
+    flex-wrap: wrap;
+}
+
+.mobiles>div {
+    margin: 1em 1em 1em 1em;
+    width: 320px;
+    height: 340px;
+    background-color: white;
+    border-radius: 10px;
+    transition: .5s;
+}
+
+.mobiles>div:hover {
+    box-shadow: 5px 5px 10px rgb(80, 79, 79);
+    transition-duration: 1s;
+}
+
+.mobileImg>img {
+    display: block;
+    margin: 10px auto;
+    width: 50%;
+}
+
+.mobileContent {
+    background-color: whitesmoke;
+    border-radius: 0px 0px 10px 10px;   
+    text-align: center;
+    padding-bottom: 1px;
+}
+
+.mobileContent>h3 {
+    padding-top: 10px;
+    color: rgb(50, 49, 49);
+}
+
+.mobileContent>h2 {
+    color: black;
+}
+
+.mobiles>h3 {
+    text-align: center;
+}

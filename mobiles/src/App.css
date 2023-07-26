@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: gainsboro;
+}
+
+a {
+  text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: aquamarine;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background-color: blue;
+}

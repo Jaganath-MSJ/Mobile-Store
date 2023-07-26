@@ -1,0 +1,81 @@
+.mobileDetailsPage {
+    margin-top: 5em;
+}
+
+.mobileDetailsPage>a {
+    margin: 10px;
+}
+
+.mobileDetailsPage>a:hover {
+    text-decoration: underline;
+}
+
+.mobileDetails {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2em 5em;
+}
+
+.imageDetails {
+    width: 40em;
+}
+
+.imageDetails>img {
+    margin: 0px auto;
+    width: 400px;
+}
+
+.details {
+    width: 30em;
+}
+
+.mainDetails {
+    font-size: 18px;
+}
+
+.mainDetails>p {
+    color: dodgerblue;
+}
+
+.mainDetails>p>span {
+    color: black;
+    margin-left: 10px;
+}
+
+.details>button, .details>a>button {
+    margin: 10px 10px;
+    padding: 10px 20px;
+    background-color: chocolate;
+    color: whitesmoke;
+    border: none;
+    border-radius: 20px;
+    font-size: medium;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.details>button:hover, .details>a>button:hover {
+    box-shadow: 2px 2px 5px rgb(80, 79, 79);
+    color: rgb(61, 61, 61);
+    transition-duration: 1s;
+}
+
+.aboutDetails>ul>li {
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 1300px) {
+    .imageDetails {
+        width: 25em;
+    }
+    .imageDetails>img {
+        width: 300px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .imageDetails>img {
+        width: 200px;
+    }
+}

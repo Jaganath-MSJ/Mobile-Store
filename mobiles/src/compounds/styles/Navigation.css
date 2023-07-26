@@ -1,0 +1,68 @@
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: chocolate;
+    display: flex;
+    flex-flow: nowrap;
+    justify-content: space-between;
+}
+
+nav>h2 {
+    margin-left: 50px;
+}
+
+nav>h2>a {
+    color: black;
+    transition: .5s;
+}
+
+nav>h2>a:hover {
+    color: dodgerblue;
+    transition-duration: .5s;
+}
+
+nav>input {
+    margin: 20px 0em;
+    width: 20em;
+    height: 2.5em;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu>li {
+    margin: 0px 50px 0px 50px;
+    list-style: none;
+    position: relative;
+    color: black;
+}
+
+.menu>li>a {
+    color: black;
+}
+
+.menu>li>a:hover {
+    color: dodgerblue;
+    transition: .5s;
+}
+
+.menu>li>a::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: dodgerblue;
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    transition: 0.5s;
+}
+
+.menu>li>a:hover::after {
+    width: 100%;
+}

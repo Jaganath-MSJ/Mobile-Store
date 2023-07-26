@@ -1,0 +1,76 @@
+.cart {
+    margin: 0px auto;
+    width: 57%;
+    margin-top: 5em;
+    text-align: center;
+}
+
+.cartTable th {
+    background-color: #377ff4;
+    color: whitesmoke;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.cartTable td {
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.quantity {
+    display: flex;
+}
+
+.quantity>button {
+    margin: 0px 8px;
+    padding: 8px 10px;
+    background-color: #377ff4;
+    border-radius: 50px;
+    color: whitesmoke;
+    border: none;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.quantity>button:disabled, .quantity>button[disabled] {
+    cursor: not-allowed;
+}
+
+.quantity>button:hover {
+    background-color: green;
+    box-shadow: 1px 1px 3px gray;
+    transition: .5s;
+}
+
+.cartTable td>button {
+    padding: 8px 10px;
+    background-color: orange;
+    border-radius: 50px;
+    border: none;
+    color: whitesbmoke;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.cartTable td>button:hover {
+    background-color: red;
+    box-shadow: 1px 1px 3px gray;
+    transition: .5s;
+}
+
+.cart>div>h3 {
+    text-align: right;
+}
+
+@media only screen and (max-width: 950px) {
+    .cart {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .cart {
+        width: 100%;
+    }
+}
