@@ -1,5 +1,6 @@
 import React, {useContext} from "react";
 import Data from "./data/phones";
+import data from "./data/Data";
 import MobileCard from "./MobileCard";
 import SearchContext from "./SearchContext";
 import "./styles/MobileCard.css";
@@ -13,7 +14,7 @@ function Mobiles() {
         return <MobileCard value={value} key={value.id} />;
       }) : (valueFromNav) ? (
         <h3>No Mobiles avaiable on this search</h3>
-      ) : Data.map((value) => {
+      ) : data.map((value) => {
         return <MobileCard value={value} key={value.id} />;
       })
     }

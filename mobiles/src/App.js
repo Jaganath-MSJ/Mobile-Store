@@ -5,8 +5,6 @@ import Mobiles from "./compounds/Mobiles";
 import MobileDetails from "./compounds/MobileDetails";
 import Cart from "./compounds/Cart";
 
-import LoginAndSignup from "./compounds/LoginAndSignup";
-
 import SearchContext from "./compounds/SearchContext";
 
 import "./App.css";
@@ -20,7 +18,6 @@ function App() {
         <Navigation />
         <Routes>
           <Route path="/" element={<Mobiles />} />
-          <Route path="/login&signup" element={<LoginAndSignup />} />
           <Route path="/:mobileId" element={<MobileDetails />} />
           <Route path="/cart" element={<Cart />} />
         </Routes>

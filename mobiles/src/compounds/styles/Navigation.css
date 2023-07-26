@@ -37,7 +37,7 @@ nav>input {
 }
 
 .menu>li {
-    margin: 0px 50px 0px 50px;
+    margin: 0px 50px;
     list-style: none;
     position: relative;
     color: black;
@@ -65,4 +65,19 @@ nav>input {
 
 .menu>li>a:hover::after {
     width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+    .menu {
+        padding: 0 10px;
+    }
+    .menu>li {
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    nav>h2 {
+        margin: 10px 0px 10px 20px;
+    }
 }
