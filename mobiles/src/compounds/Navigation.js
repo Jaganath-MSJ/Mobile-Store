@@ -10,7 +10,7 @@ import { faUser } from "@fortawesome/free-solid-svg-icons";
 function Navigation() {
     const {valueFromNav, setValueFromNav} = useContext(SearchContext);
     const handleSearch = (event) => {
-        setValueFromNav(event.target.value);
+        setValueFromNav(event.target.value.trim());
     }
   return (
     <nav>

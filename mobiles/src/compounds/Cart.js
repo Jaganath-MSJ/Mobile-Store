@@ -109,7 +109,6 @@ function CartMap({ item, pos, cartData, handleChange }) {
     });
     cartData.splice(pos, 1);
     handleChange(Math.random(6));
-    console.log(cartData);
   };
 
   return (
