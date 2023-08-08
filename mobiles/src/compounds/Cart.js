@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./styles/Cart.css";
+import { host } from "./APIRoute.js";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
@@ -11,7 +12,7 @@ function Cart() {
   const [onChange, setOnChange] = useState();
 
   useEffect(() => {
-    fetch("http://localhost:8000/")
+    fetch(host)
       .then((response) => response.json())
       .then((item) => setCartData(item.allDetails));
   }, onChange);
@@ -68,7 +69,7 @@ function CartMap({ item, pos, cartData, handleChange }) {
 
   const handleAddQuantity = (event) => {
     event.preventDefault();
-    fetch("http://localhost:8000/addQuantity/" + { _id }, {
+    fetch(host + "/addQuantity/" + { _id }, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -83,7 +84,7 @@ function CartMap({ item, pos, cartData, handleChange }) {
 
   const handleSubQuantity = (event) => {
     event.preventDefault();
-    fetch("http://localhost:8000/subQuantity/" + { _id }, {
+    fetch(host + "/subQuantity/" + { _id }, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -98,7 +99,7 @@ function CartMap({ item, pos, cartData, handleChange }) {
 
   const handleRemove = (event) => {
     event.preventDefault();
-    fetch("http://localhost:8000/remove/" + { _id }, {
+    fetch(host + "/remove/" + { _id }, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

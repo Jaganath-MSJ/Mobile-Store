@@ -1,6 +1,7 @@
 import "./styles/MobileDetails.css";
 import { useParams, Link } from "react-router-dom";
 import Data from "./data/phones";
+import { host } from "./APIRoute.js";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
@@ -21,7 +22,7 @@ function MobileDetails() {
 
   const handleAddToCart = async (event) => {
     event.preventDefault();
-    fetch("http://localhost:8000/add", {
+    fetch(host + "/add", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -1,7 +1,11 @@
 import express from "express";
 import collection from "./db.js";
 import cors from "cors";
+import dotenv from "dotenv";
+const port = process.env.PORT || 8000;
+
 const app = express();
+dotenv.config();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -66,6 +70,6 @@ app.put("/remove/:id", async (req, res) => {
     .then(res.json(`Obect with id ${_id} removed`));
 });
 
-app.listen(8000, () => {
-  console.log("port connected");
+app.listen(port, () => {
+  console.log("port connected at " + port);
 });

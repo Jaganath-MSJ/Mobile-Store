@@ -13,15 +13,15 @@ function App() {
   const [valueFromNav, setValueFromNav] = useState();
   return (
     <div className="App">
-      <SearchContext.Provider value={{valueFromNav, setValueFromNav}}>
-      <BrowserRouter>
-        <Navigation />
-        <Routes>
-          <Route path="/" element={<Mobiles />} />
-          <Route path="/:mobileId" element={<MobileDetails />} />
-          <Route path="/cart" element={<Cart />} />
-        </Routes>
-      </BrowserRouter>
+      <SearchContext.Provider value={{ valueFromNav, setValueFromNav }}>
+        <BrowserRouter>
+          <Navigation />
+          <Routes>
+            <Route path="/" element={<Mobiles />} />
+            <Route path="/:mobileId" element={<MobileDetails />} />
+            <Route path="/cart" element={<Cart />} />
+          </Routes>
+        </BrowserRouter>
       </SearchContext.Provider>
     </div>
   );

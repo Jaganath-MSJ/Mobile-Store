@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
-
-const url = `mongodb+srv://jaganath:mZBCJxmhIjxLOgA2@cluster0.aghrham.mongodb.net/mobilestore?retryWrites=true&w=majority`;
+import dotenv from "dotenv";
+dotenv.config();
 
 const connectionParams = {
   useNewUrlParser: true,
@@ -8,7 +8,7 @@ const connectionParams = {
 };
 
 mongoose
-  .connect(url, connectionParams)
+  .connect(process.env.MONGO_URL, connectionParams)
   .then(() => {
     console.info("Connected to database ");
   })

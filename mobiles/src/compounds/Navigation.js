@@ -8,16 +8,21 @@ import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 
 function Navigation() {
-    const {valueFromNav, setValueFromNav} = useContext(SearchContext);
-    const handleSearch = (event) => {
-        setValueFromNav(event.target.value.trim());
-    }
+  const { valueFromNav, setValueFromNav } = useContext(SearchContext);
+  const handleSearch = (event) => {
+    setValueFromNav(event.target.value.trim());
+  };
   return (
     <nav>
       <h2>
         <Link to="/">Mobiles Store</Link>
       </h2>
-      <input type="search" placeholder="Search for mobiles" value={valueFromNav} onChange={handleSearch}></input>
+      <input
+        type="search"
+        placeholder="Search for mobiles"
+        value={valueFromNav}
+        onChange={handleSearch}
+      ></input>
       <ul className="menu">
         <li>
           <Link to="/cart">
