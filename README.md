@@ -41,5 +41,5 @@ For a live demonstration, you can visit [Demo Link](https://msj-mobile-store.net
 Feel free to reach out to me via email at [jagan.msjc@gmail.com](mailto:jagan.msjc@gmail.com) or connect on [LinkedIn](https://www.linkedin.com/in/jaganathms).
 
 ## Thanks To
-### [Netlify](https://www.netlify.com) for frondend
-### [Render](https://render.com) for backend
+[Netlify](https://www.netlify.com) for frondend
+[Render](https://render.com) for backend
