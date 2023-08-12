@@ -42,4 +42,5 @@ Feel free to reach out to me via email at [jagan.msjc@gmail.com](mailto:jagan.ms
 
 ## Thanks To
 [Netlify](https://www.netlify.com) for frondend
+
 [Render](https://render.com) for backend
