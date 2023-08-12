@@ -14,8 +14,8 @@ The Mobile Store Application simplifies the process of exploring and selecting m
 - Responsive design for seamless use on various devices.
 
 ## Tech Stack:
-- Frontend: HTML, CSS, JavaScript
-- Backend: Node.js, Express
+- Frontend: React JS, HTML, CSS
+- Backend: Node.js, Express js
 - Database: MongoDB
 
 ## Key Features:
