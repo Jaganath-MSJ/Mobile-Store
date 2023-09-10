@@ -22,7 +22,7 @@ function Navigation() {
         placeholder="Search for mobiles"
         value={valueFromNav}
         onChange={handleSearch}
-      ></input>
+      />
       <ul className="menu">
         <li>
           <Link to="/cart">
