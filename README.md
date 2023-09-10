@@ -14,8 +14,8 @@ The Mobile Store Application simplifies the process of exploring and selecting m
 - Responsive design for seamless use on various devices.
 
 ## Tech Stack:
-- Frontend: HTML, CSS, JavaScript
-- Backend: Node.js, Express
+- Frontend: React JS, HTML, CSS
+- Backend: Node.js, Express js
 - Database: MongoDB
 
 ## Key Features:
@@ -25,7 +25,7 @@ The Mobile Store Application simplifies the process of exploring and selecting m
 - Real-time updates on selected mobiles.
 
 ## Get Started
-1. Clone this repository: `git clone REPO_URL`
+1. Clone this repository: `git clone https://github.com/Jaganath-MSJ/Mobile-Store.git`
 2. Navigate to the project directory: `cd Mobile-store`
 3. Navigate to Frontend: `cd mobiles`
 4. Install dependencies: `npm install`
