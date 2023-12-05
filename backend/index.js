@@ -50,7 +50,7 @@ app.put("/addQuantity/:id", async (req, res) => {
       { _id: _id.toString() },
       { $set: { quantity: value + 1, total_price: price * (value + 1) } }
     )
-    .then(res.json(`Obect with id ${_id} removed`));
+    .then(res.json(`Obect with id ${_id} quantity added`));
 });
 
 app.put("/subQuantity/:id", async (req, res) => {
@@ -60,7 +60,7 @@ app.put("/subQuantity/:id", async (req, res) => {
       { _id: _id.toString() },
       { $set: { quantity: value - 1, total_price: price * (value - 1) } }
     )
-    .then(res.json(`Obect with id ${_id} removed`));
+    .then(res.json(`Obect with id ${_id} quantity subracted`));
 });
 
 app.put("/remove/:id", async (req, res) => {

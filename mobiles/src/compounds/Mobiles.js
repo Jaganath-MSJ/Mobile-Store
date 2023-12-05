@@ -10,21 +10,21 @@ function Mobiles() {
   const searchData = Data.filter((value) =>
     (value.brand + " " + value.model).includes(valueFromNav)
   );
-  return (
-    <div class="mobiles">
-      {searchData.length > 0 ? (
-        searchData.map((value) => {
-          return <MobileCard value={value} key={value.id} />;
-        })
-      ) : valueFromNav ? (
-        <h3>No Mobiles avaiable on this search</h3>
-      ) : (
-        data.map((value) => {
-          return <MobileCard value={value} key={value.id} />;
-        })
-      )}
-    </div>
-  );
+
+  let renderValue = null;
+  if (searchData.length > 0) {
+    renderValue = searchData.map((value) => (
+      <MobileCard value={value} key={value.id} />
+    ));
+  } else if (valueFromNav) {
+    renderValue = <h3>No Mobiles avaiable on this search</h3>;
+  } else {
+    renderValue = data.map((value) => (
+      <MobileCard value={value} key={value.id} />
+    ));
+  }
+
+  return <div className="mobiles">{renderValue}</div>;
 }
 
 export default Mobiles;

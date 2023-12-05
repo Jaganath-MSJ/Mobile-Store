@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navigation from "./compounds/Navigation";
 import Mobiles from "./compounds/Mobiles";
@@ -11,9 +11,14 @@ import "./App.css";
 
 function App() {
   const [valueFromNav, setValueFromNav] = useState();
+  const searchContextValue = useMemo(
+    () => ({ valueFromNav, setValueFromNav }),
+    [valueFromNav]
+  );
+
   return (
     <div className="App">
-      <SearchContext.Provider value={{ valueFromNav, setValueFromNav }}>
+      <SearchContext.Provider value={searchContextValue}>
         <BrowserRouter>
           <Navigation />
           <Routes>
