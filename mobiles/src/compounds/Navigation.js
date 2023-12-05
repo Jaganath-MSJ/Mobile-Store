@@ -4,14 +4,14 @@ import { Link } from "react-router-dom";
 import SearchContext from "./SearchContext";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
-import { faUser } from "@fortawesome/free-solid-svg-icons";
+import { faCartShopping, faUser } from "@fortawesome/free-solid-svg-icons";
 
 function Navigation() {
   const { valueFromNav, setValueFromNav } = useContext(SearchContext);
   const handleSearch = (event) => {
     setValueFromNav(event.target.value.trim());
   };
+
   return (
     <nav>
       <h2>

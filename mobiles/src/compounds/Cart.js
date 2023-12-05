@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 import "./styles/Cart.css";
 import { host } from "./APIRoute.js";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTrash } from "@fortawesome/free-solid-svg-icons";
-import { faPlus } from "@fortawesome/free-solid-svg-icons";
-import { faMinus } from "@fortawesome/free-solid-svg-icons";
+import { faTrash, faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";
 
 function Cart() {
   const [cartData, setCartData] = useState([]);
@@ -15,12 +14,12 @@ function Cart() {
     fetch(host)
       .then((response) => response.json())
       .then((item) => setCartData(item.allDetails));
-  }, onChange);
+  }, [onChange]);
 
   return (
     <div className="cart">
       <h1>Your Cart</h1>
-      {cartData.length !== 0 ? (
+      {cartData.length > 0 ? (
         <div>
           <table className="cartTable">
             <thead>
@@ -34,17 +33,17 @@ function Cart() {
               </tr>
             </thead>
             <tbody>
-              {cartData &&
-                cartData.map((item, pos) => {
-                  return (
-                    <CartMap
-                      item={item}
-                      pos={pos}
-                      cartData={cartData}
-                      handleChange={setOnChange}
-                    />
-                  );
-                })}
+              {cartData.map((item, pos) => {
+                return (
+                  <CartMap
+                    key={item._id}
+                    item={item}
+                    pos={pos}
+                    cartData={cartData}
+                    handleChange={setOnChange}
+                  />
+                );
+              })}
             </tbody>
           </table>
           <h3>
@@ -69,7 +68,7 @@ function CartMap({ item, pos, cartData, handleChange }) {
 
   const handleAddQuantity = (event) => {
     event.preventDefault();
-    fetch(host + "/addQuantity/" + { _id }, {
+    fetch(host + "/addQuantity/" + _id, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -84,7 +83,7 @@ function CartMap({ item, pos, cartData, handleChange }) {
 
   const handleSubQuantity = (event) => {
     event.preventDefault();
-    fetch(host + "/subQuantity/" + { _id }, {
+    fetch(host + "/subQuantity/" + _id, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -99,7 +98,7 @@ function CartMap({ item, pos, cartData, handleChange }) {
 
   const handleRemove = (event) => {
     event.preventDefault();
-    fetch(host + "/remove/" + { _id }, {
+    fetch(host + "/remove/" + _id, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -149,5 +148,12 @@ function CartMap({ item, pos, cartData, handleChange }) {
     </tr>
   );
 }
+
+CartMap.propTypes = {
+  item: PropTypes.object.isRequired,
+  pos: PropTypes.number.isRequired,
+  cartData: PropTypes.arrayOf(PropTypes.object).isRequired,
+  handleChange: PropTypes.func,
+};
 
 export default Cart;

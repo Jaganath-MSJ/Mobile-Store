@@ -1,0 +1,26 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/mobiles/node_modules
+/mobiles/.pnp
+/mobiles/.pnp.js
+/backend/node_modules
+
+# testing
+/mobiles/coverage
+
+# production
+/mobiles/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+/mobiles/npm-debug.log*
+/mobiles/yarn-debug.log*
+/mobiles/yarn-error.log*
+
+/mobiles/.vscode

@@ -4,9 +4,11 @@ import Data from "./data/phones";
 import { host } from "./APIRoute.js";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
-import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
-import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import {
+  faAngleLeft,
+  faCartPlus,
+  faCartShopping,
+} from "@fortawesome/free-solid-svg-icons";
 
 function MobileDetails() {
   const { mobileId } = useParams();

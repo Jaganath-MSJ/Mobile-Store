@@ -1,14 +1,15 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 function MobileCard({ value }) {
   return (
     <div>
       <Link to={`/${value.id}`}>
-        <div class="mobileImg">
+        <div className="mobileImg">
           <img src={value.img_url} alt={value.brand + " " + value.model} />
         </div>
-        <div class="mobileContent">
+        <div className="mobileContent">
           <h3>{value.brand + " " + value.model}</h3>
           <h2>
             {(Number(value.approx_price_EUR) * 90).toLocaleString("ta-In", {
@@ -21,5 +22,9 @@ function MobileCard({ value }) {
     </div>
   );
 }
+
+MobileCard.propTypes = {
+  value: PropTypes.object.isRequired,
+};
 
 export default MobileCard;
